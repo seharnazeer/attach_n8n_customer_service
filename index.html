@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus AI - Intelligent Automation</title>
+    <meta name="description" content="Streamline your workflow with our advanced AI solutions." />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- n8n Chat CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8',
+                500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e', 950: '#082f49',
+              },
+              accent: {
+                50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 300: '#c4b5fd', 400: '#a78bfa',
+                500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9', 800: '#5b21b6', 900: '#4c1d95', 950: '#2e1065',
+              }
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #020617; }
+      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #334155; }
+      
+      /* Global Chat Overrides for @n8n/chat */
+      :root {
+        --n8n-chat-primary-color: #0ea5e9;
+        --n8n-chat-secondary-color: #1e293b;
+        --n8n-chat-background-color: #0f172a;
+        --n8n-chat-font-family: 'Inter', sans-serif;
+        --n8n-chat-text-color: #f1f5f9;
+        --n8n-chat-input-background-color: #1e293b;
+        --n8n-chat-message-user-background-color: #0ea5e9;
+        --n8n-chat-message-bot-background-color: #1e293b;
+        --n8n-chat-message-text-color: #ffffff;
+      }
+
+      /* Premium Styling for n8n Chat Widget Components */
+      .n8n-chat-widget {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+      }
+
+      .n8n-chat-header {
+        background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .n8n-chat-button {
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.4) !important;
+        transition: all 0.3s ease !important;
+      }
+
+      .n8n-chat-button:hover {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 0 30px rgba(14, 165, 233, 0.6) !important;
+      }
+
+      /* Message bubble refinement */
+      .n8n-chat-message {
+        border-radius: 16px !important;
+        line-height: 1.6 !important;
+        font-size: 14px !important;
+        margin-bottom: 12px !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      .n8n-chat-message-user {
+        border-bottom-right-radius: 4px !important;
+      }
+
+      .n8n-chat-message-bot {
+        border-bottom-left-radius: 4px !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react/": "https://esm.sh/react@18.2.0/",
+        "react-dom": "https://esm.sh/react-dom@18.2.0",
+        "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "lucide-react": "https://esm.sh/lucide-react@0.454.0?external=react,react-dom",
+        "@n8n/chat": "https://cdn.jsdelivr.net/npm/@n8n/chat@1.0.0/dist/chat.bundle.es.js"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-50 antialiased selection:bg-primary-500 selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
