@@ -10,7 +10,7 @@ const N8nChatWidget: React.FC = () => {
     // ==========================================
     // CONFIGURATION: PASTE YOUR N8N WEBHOOK URL HERE
     // ==========================================
-    const webhookUrl = 'https://n8n.srv1165683.hstgr.cloud/webhook/dabf8954-4a3e-4b99-adda-d553de46287b/chat';
+    const webhookUrl = '';
     // ==========================================
 
     // Auth credentials (if required by your n8n workflow settings)
